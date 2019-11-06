@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import "./App.css";
-import PhotoCard from "../Components/PhotoCard";
+import PhotoCard from './Components/PhotoCard';
 
 function App() {
 
   const [nasaImg, setNasaImg] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=DRciVBnKsadw32Qr1nN7EpkTtestJuBd3odCGEuMy")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DRciVBnKsadw32Qr1nN7EpkTtestJuBd3odCGEuM")
     .then(response => {
       console.log(response.data);
       setNasaImg(response.data);
